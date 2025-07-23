@@ -352,13 +352,13 @@ body {
     background: transparent;
     position: relative;
     margin-top: -160px;
-    margin-bottom: -100px;
+    margin-bottom: 0;
     z-index: 11;
 }
 
 /* Add spacing after browser section */
 .browser-section + .projects-section {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .browser-window {
@@ -1050,6 +1050,7 @@ body {
     .browser-window {
         max-width: 98%;
         transform: perspective(1000px) rotateX(2deg);
+        max-height: 400px;
     }
     
     .browser-window:hover {
@@ -1074,7 +1075,7 @@ body {
     
     /* Mobile spacing after browser section */
     .browser-section + .projects-section {
-        margin-top: 150px;
+        margin-top: 80px;
     }
     
     .nav-menu {
