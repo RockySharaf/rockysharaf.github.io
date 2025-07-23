@@ -356,6 +356,11 @@ body {
     z-index: 11;
 }
 
+/* Add spacing after browser section */
+.browser-section + .projects-section {
+    margin-top: 100px;
+}
+
 .browser-window {
     max-width: 1000px;
     margin: 0 auto;
@@ -475,7 +480,7 @@ body {
 /* Projects Section */
 .projects-section {
     background: transparent;
-    padding-top: 200px; /* Increased from 150px to push it down further */
+    padding-top: 150px;
     position: relative;
     z-index: 11;
 }
@@ -1065,6 +1070,11 @@ body {
     
     .screenshot-placeholder p {
         font-size: 0.9rem;
+    }
+    
+    /* Mobile spacing after browser section */
+    .browser-section + .projects-section {
+        margin-top: 150px;
     }
     
     .nav-menu {
