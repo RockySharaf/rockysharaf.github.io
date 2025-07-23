@@ -52,6 +52,34 @@
     box-sizing: border-box;
 }
 
+/* Try to hide browser fullscreen messages */
+::backdrop {
+    background: transparent !important;
+}
+
+/* Hide any browser-generated fullscreen UI */
+.fullscreen-ui,
+.fullscreen-message,
+.fullscreen-hint,
+[class*="fullscreen"],
+[class*="Fullscreen"],
+[id*="fullscreen"],
+[id*="Fullscreen"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Target specific browser messages */
+div:contains("To exit full screen"),
+div:contains("press Esc"),
+div:contains("file://") {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -305,28 +333,7 @@ body {
     box-shadow: 0 15px 40px var(--shadow-color);
 }
 
-/* Fullscreen Button */
-.fullscreen-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--accent-primary);
-    color: var(--button-text);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1003;
-    box-shadow: 0 4px 15px var(--shadow-color);
-}
 
-.fullscreen-button:hover {
-    background: var(--accent-secondary);
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px var(--shadow-color);
-}
 
 @keyframes fadeInUp {
     from {

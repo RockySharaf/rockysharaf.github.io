@@ -146,24 +146,68 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Auto fullscreen function
     function requestFullscreen() {
-        if (document.documentElement.requestFullscreen) {
-            document.documentElement.requestFullscreen();
-        } else if (document.documentElement.webkitRequestFullscreen) {
+        // Try different methods to minimize browser UI
+        if (document.documentElement.webkitRequestFullscreen) {
             document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.log('Fullscreen failed:', err);
+            });
         } else if (document.documentElement.msRequestFullscreen) {
             document.documentElement.msRequestFullscreen();
         }
     }
     
-    // Try to enter fullscreen after a short delay
-    setTimeout(() => {
-        // Only request fullscreen if not already in fullscreen
+    // Try fullscreen multiple times
+    function tryFullscreen() {
         if (!document.fullscreenElement && 
             !document.webkitFullscreenElement && 
             !document.msFullscreenElement) {
+            console.log('Trying fullscreen...');
             requestFullscreen();
         }
-    }, 1000);
+    }
+    
+    // Try fullscreen multiple times at different intervals
+    setTimeout(tryFullscreen, 500);
+    setTimeout(tryFullscreen, 1500);
+    setTimeout(tryFullscreen, 3000);
+    
+    // Try after any user interaction
+    let fullscreenAttempted = false;
+    
+    function triggerFullscreen() {
+        if (!fullscreenAttempted) {
+            fullscreenAttempted = true;
+            console.log('Click detected, attempting fullscreen...');
+            setTimeout(tryFullscreen, 200);
+        }
+    }
+    
+    document.addEventListener('click', triggerFullscreen);
+    document.addEventListener('keydown', triggerFullscreen);
+    
+    // Try to hide browser fullscreen messages
+    function hideFullscreenMessages() {
+        // Look for any elements containing fullscreen exit text
+        const elements = document.querySelectorAll('*');
+        elements.forEach(element => {
+            if (element.textContent && (
+                element.textContent.includes('To exit full screen') ||
+                element.textContent.includes('press Esc') ||
+                element.textContent.includes('file://')
+            )) {
+                element.style.display = 'none';
+                element.style.opacity = '0';
+                element.style.visibility = 'hidden';
+                element.style.pointerEvents = 'none';
+            }
+        });
+    }
+    
+    // Run immediately and then periodically
+    hideFullscreenMessages();
+    setInterval(hideFullscreenMessages, 100);
     
     // Initialize particles after a short delay to ensure everything is loaded
     setTimeout(() => {
@@ -213,54 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeWriter, 500);
     }
     
-    // Fullscreen button functionality
-    const fullscreenBtn = document.getElementById('fullscreen-btn');
-    if (fullscreenBtn) {
-        fullscreenBtn.addEventListener('click', () => {
-            if (!document.fullscreenElement && 
-                !document.webkitFullscreenElement && 
-                !document.msFullscreenElement) {
-                // Enter fullscreen
-                if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen();
-                } else if (document.documentElement.webkitRequestFullscreen) {
-                    document.documentElement.webkitRequestFullscreen();
-                } else if (document.documentElement.msRequestFullscreen) {
-                    document.documentElement.msRequestFullscreen();
-                }
-                fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
-                fullscreenBtn.title = 'Exit Fullscreen';
-            } else {
-                // Exit fullscreen
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) {
-                    document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) {
-                    document.msExitFullscreen();
-                }
-                fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-                fullscreenBtn.title = 'Enter Fullscreen';
-            }
-        });
-        
-        // Update button icon when fullscreen state changes
-        document.addEventListener('fullscreenchange', updateFullscreenIcon);
-        document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
-        document.addEventListener('msfullscreenchange', updateFullscreenIcon);
-        
-        function updateFullscreenIcon() {
-            if (document.fullscreenElement || 
-                document.webkitFullscreenElement || 
-                document.msFullscreenElement) {
-                fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
-                fullscreenBtn.title = 'Exit Fullscreen';
-            } else {
-                fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
-                fullscreenBtn.title = 'Enter Fullscreen';
-            }
-        }
-    }
+
 });
 
 // Auto-moving hero glow with random bouncing and proper angles
