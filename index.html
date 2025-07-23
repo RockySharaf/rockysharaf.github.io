@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocky Sharaf - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#" class="text-xl font-bold">Rocky Sharaf</a>
+            </div>
+            
+            <!-- Desktop menu -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="dark-mode-toggle" id="dark-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-glow"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm Rocky Sharaf</h1>
+            <h2 class="hero-subtitle">Data | Research</h2>
+            <p class="hero-description">I build tools, bots, and full-stack systems.</p>
+            <a href="mailto:rockysharaf@gmail.com" class="hero-button">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Browser Image Section -->
+    <section class="browser-section">
+        <div class="container">
+            <div class="browser-window">
+                <div class="browser-header">
+                    <div class="browser-controls">
+                        <div class="browser-button red"></div>
+                        <div class="browser-button yellow"></div>
+                        <div class="browser-button green"></div>
+                    </div>
+                    <div class="browser-address-bar">
+                        <div class="browser-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="browser-url">rockysharaf.dev</span>
+                    </div>
+                </div>
+                <div class="browser-content">
+                    <div class="browser-screenshot">
+                        <div class="screenshot-placeholder">
+                            <i class="fas fa-code"></i>
+                            <h3>Building Amazing Things</h3>
+                            <p>Full-stack development • Automation • AI Integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Jewelry Order Management System</h3>
+                    <ul>
+                        <li>Desktop app for full tracking of customers, orders, payments</li>
+                        <li>Auto-invoicing and low-stock alerts cut manual work by 70%</li>
+                        <li>Technologies: C#, .NET WinForms, Entity Framework, SQL Server</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <h3>StickyOverlay App (AI Chat Search)</h3>
+                    <ul>
+                        <li>GPU-rendered overlay that bypasses screen capture</li>
+                        <li>Hover-triggered UI with ChatGPT search, hotkeys, rich formatting</li>
+                        <li>Technologies: C#, .NET 8 WinForms, WebView2</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Google Drive Automation Bot</h3>
+                    <ul>
+                        <li>Bulk uploads, folder setup, permission sharing, email updates</li>
+                        <li>Retry logic handles network drops with 99.5% success</li>
+                        <li>Technologies: Python, Selenium, Google Drive API</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <h3>US-Visa Automation Tool</h3>
+                    <ul>
+                        <li>Fills multi-page visitor visa forms, solves CAPTCHA</li>
+                        <li>End-to-end auto-reschedule & notification system</li>
+                        <li>Technologies: Python, Selenium, SMTP</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Invisible Keylogger (Triggered Screenshots)</h3>
+                    <ul>
+                        <li>Hidden logger with encrypted keystroke storage</li>
+                        <li>Screenshots triggered by custom events</li>
+                        <li>Technologies: C++, Windows API, DirectX</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Gray Jays Driving School Website</h3>
+                    <ul>
+                        <li>SEO-optimized site with booking system and admin dashboard</li>
+                        <li>Fully responsive design</li>
+                        <li>Technologies: React, Node.js, Express, MongoDB, Tailwind CSS</li>
+                    </ul>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Clash Royale Merge Tactics Bot</h3>
+                    <ul>
+                        <li>AI bot ranks troops by synergy, cost, and trait score</li>
+                        <li>Merge decision engine to optimize gameplay</li>
+                        <li>Technologies: Python, NumPy, Custom Game API</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages & Frameworks</h3>
+                    <ul>
+                        <li>C# & .NET (WinForms/.NET 8, Entity Framework, GPU level rendering)</li>
+                        <li>C++ (Windows API hooks, DirectX screen capture, kernel mode driver code)</li>
+                        <li>Python (automation scripts, Selenium, NumPy for AI logic)</li>
+                        <li>JavaScript/TypeScript (React, Next.js, Node.js, Express)</li>
+                        <li>SQL (SQL Server, MongoDB)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Low Level & Systems Programming</h3>
+                    <ul>
+                        <li>GPU Level Overlay Hooking (DirectX 11 SwapChain via MinHook)</li>
+                        <li>Kernel Mode Driver Development (KMDF, MmMapIoSpace, custom BMP headers)</li>
+                        <li>Hypervisor Based Overlays (QEMU/KVM, GPU passthrough)</li>
+                        <li>PCIe DMA Framebuffer Capture</li>
+                        <li>Raw USB Input Handling</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Web & UI Development</h3>
+                    <ul>
+                        <li>Responsive Web Design (React, Tailwind CSS, SEO optimization)</li>
+                        <li>Embedded Browser Controls (CefSharp → WebView2)</li>
+                        <li>RTF/Text Formatting UIs (rich text note overlays)</li>
+                        <li>Booking Systems & Dashboards (performance analytics, real time reporting)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Automation & Bots</h3>
+                    <ul>
+                        <li>Selenium Automation (Google Drive Bot; US Visa form auto filler)</li>
+                        <li>Game Bot Logic (Clash Royale Merge Tactics: troop scoring, elixir economy)</li>
+                        <li>Invisible Keylogger & Screenshot Trigger (stealth input logging, event based captures)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>AI & Integration</h3>
+                    <ul>
+                        <li>OpenAI/ChatGPT API (in app search bar, live AI responses)</li>
+                        <li>Custom AI Engines (NumPy driven decision logic for game bot)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Dev Tools & Environments</h3>
+                    <ul>
+                        <li>Visual Studio & WDK (driver kit setup, DevCon integration)</li>
+                        <li>VS Code (editor preference)</li>
+                        <li>Git/GitHub (version control)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data & Reporting</h3>
+                    <ul>
+                        <li>Dynamic Reporting Modules (sales/inventory dashboards)</li>
+                        <li>Analytics & A/B Testing (campaign performance measurement)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Digital Marketing</h3>
+                    <ul>
+                        <li>Lead Generation & Campaign Support</li>
+                        <li>Multi Channel Strategy & A/B Testing</li>
+                        <li>Promotional Design (print & digital assets)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Project & Academic Management</h3>
+                    <ul>
+                        <li>WBS & Scheduling (dependencies, milestones, resource leveling)</li>
+                        <li>Risk Management & Stakeholder Communication</li>
+                        <li>Research & Academic Writing (APA references, reflections, presentations)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Test Administrator</h3>
+                                <p class="company">Pearson VUE</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <p>May 2025 - Jun 2025 · 2 mos</p>
+                                <p>Ontario, Canada · On-site</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Managed secure exam delivery, including candidate check-in, identity checks (palm vein, digital ID, photo capture), and live proctoring.</li>
+                            <li>Used Pearson VUE systems like Registration Manager (for scheduling, records, payments) and Delivery Manager (for exam sessions).</li>
+                            <li>Kept test center operations compliant by updating schedules, managing accounts, and submitting exam results through Remote Maintenance Agent (RMA).</li>
+                            <li>Followed strict security rules for exam content and candidate info; handled personal belongings and reported any issues using ServiceDirect.</li>
+                            <li>Maintained Pearson VUE Certified Administrator status with annual recertification and followed all professional standards.</li>
+                        </ul>
+                        <div class="skills-tag">
+                            <strong>Skills:</strong> Pearson VUE Systems · Exam Administration · Security Protocols · Customer Service · Compliance Management · Identity Verification · Live Proctoring · ServiceDirect · RMA
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Marketing Coordinator</h3>
+                                <p class="company">GrayJays Driving School</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <p>Sep 2024 - May 2025 · 9 mos</p>
+                                <p>Toronto, Ontario, Canada · Remote</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Develop and implement marketing campaigns to promote driving programs, using both digital channels and local community outreach.</li>
+                            <li>Manage and update the school's website with SEO-focused content to increase visibility and attract new students.</li>
+                            <li>Create, schedule, and manage engaging social media content (e.g., Facebook, Instagram) to build community and showcase student success stories.</li>
+                            <li>Design and distribute marketing materials such as flyers, blog posts, and digital ads, ensuring consistent branding across all platforms.</li>
+                            <li>Track and analyze campaign performance using Google Analytics and social media insights, adjusting strategies based on data.</li>
+                            <li>Organize and promote local events, workshops, and partnerships to raise awareness about driving safety and school offerings.</li>
+                        </ul>
+                        <div class="skills-tag">
+                            <strong>Skills:</strong> Digital Marketing · Social Media Management · SEO · Google Analytics · Content Creation · Campaign Management · Brand Management · Event Planning · Community Outreach · Graphic Design
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Quantitative Research Intern - Forage</h3>
+                                <p class="company">JPMorganChase</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <p>Dec 2024 - Feb 2025 · 3 mos</p>
+                                <p>Ontario, Canada</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Developed a Python-based pricing model for natural gas storage contracts, leveraging historical price data and seasonal trends to forecast future prices with 25% improved accuracy.</li>
+                            <li>Built a predictive model for loan default probabilities using customer data, incorporating decision trees and regression analysis.</li>
+                            <li>Designed a dynamic programming solution to optimize FICO score bucketing for mortgage default prediction.</li>
+                            <li>Automated data extraction, cleaning, and visualization workflows using Python and advanced Excel functions.</li>
+                            <li>Collaborated with cross-functional teams to validate and refine pricing models.</li>
+                        </ul>
+                        <div class="skills-tag">
+                            <strong>Skills:</strong> Python · Data Analysis · Machine Learning · Time-Series Forecasting · Predictive Modeling · Dynamic Programming · Excel · Data Visualization · Problem Solving
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Specialist</h3>
+                                <p class="company">Dynacast International</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <p>Sep 2022 - Apr 2023 · 8 mos</p>
+                                <p>Peterborough, Ontario, Canada · On-site</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Spearheaded the creation and upkeep of sophisticated dashboards and analytical reports using Power BI and Tableau.</li>
+                            <li>Utilized advanced Excel functions like VLOOKUP, Macros, and Pivot Tables to streamline data analysis and reporting processes.</li>
+                            <li>Oversaw the handling of large-scale datasets with MS SQL Server, focusing on maintaining the highest standards of data integrity.</li>
+                            <li>Leveraged SQL expertise to optimize database queries, resulting in a reduction in data retrieval times.</li>
+                            <li>Innovatively engineered and refined ETL workflows with SSIS, markedly enhancing the efficiency and dependability of data processing operations.</li>
+                        </ul>
+                        <div class="skills-tag">
+                            <strong>Skills:</strong> Microsoft Power BI · SQL · Microsoft Excel · Smartsheet · Dashboards
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Entry Clerk</h3>
+                                <p class="company">Dynacast International</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <p>Aug 2022 - Sep 2022 · 2 mos</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Processed over 1000 data entry tasks daily with an accuracy rate of 98%, maintaining high quality standards.</li>
+                            <li>Utilized advanced Excel functions to analyze and organize data, resulting in a 20% increase in efficiency.</li>
+                            <li>Collaborated with cross-functional teams to streamline data entry processes, reducing turnaround time by 30%.</li>
+                        </ul>
+                        <div class="skills-tag">
+                            <strong>Skills:</strong> Online Data Entry · Microsoft Excel (Advanced Functions: VLOOKUP, Pivot Tables, Macros) · Process Optimization · Workflow Automation · Attention to Detail
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Frontend Developer Intern</h3>
+                                <p class="company">Technova Solutions Pvt Ltd</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <p>May 2020 - Aug 2020 · 4 mos</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Developed user-friendly interfaces for a retail web platform.</li>
+                            <li>Improved website performance through basic SEO practices.</li>
+                            <li>Designed responsive layouts ensuring cross-device compatibility.</li>
+                            <li>Collaborated with the team to enhance website functionality.</li>
+                        </ul>
+                        <div class="skills-tag">
+                            <strong>Skills:</strong> HTML · CSS · JavaScript · Software Development · Web Development · Communication Skills · Front-End Development
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h3>Trent University</h3>
+                            <p class="degree">Bachelor of Science - BS, Computer Science</p>
+                        </div>
+                        <div class="education-meta">
+                            <p>Jan 2022 - Sep 2023</p>
+                            <p>Grade: 3.7 GPA</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Focused on building a strong foundation in computer science, with emphasis on Data Analytics, machine learning, and statistical methods.</li>
+                        <li>Worked on real-world projects analyzing large datasets and gaining insights to inform business decisions.</li>
+                        <li>Gained hands-on experience in programming languages such as Python, Java, and C++, as well as data visualization tools.</li>
+                        <li>Completed coursework in web development, artificial intelligence, and predictive modeling.</li>
+                        <li>Earned a place on the President's Honor Roll and Dean's Honor Roll for academic excellence.</li>
+                        <li>Participated in hackathons and coding competitions to apply technical skills and solve complex problems.</li>
+                    </ul>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h3>Lovely Professional University</h3>
+                            <p class="degree">Bachelor of Technology - BTech, Computer Science</p>
+                        </div>
+                        <div class="education-meta">
+                            <p>Aug 2019 - Dec 2021</p>
+                            <p>Grade: 9.0</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Achieved a 9.0 CGPA and was recognized for both academic performance and extracurricular involvement.</li>
+                        <li>Developed core skills in programming, software engineering, and data structures.</li>
+                        <li>Gained practical experience in both front-end and back-end web development.</li>
+                        <li>Contributed to group projects, collaborating with peers to develop innovative tech solutions.</li>
+                        <li>Enhanced problem-solving skills through coursework and coding competitions.</li>
+                        <li>Participated in workshops and seminars on emerging technologies like AI, cybersecurity, and cloud computing.</li>
+                        <li>Actively engaged in university tech clubs and events, sharpening leadership and teamwork abilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:rockysharaf@gmail.com">rockysharaf@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/rockysharaf" target="_blank" rel="noopener noreferrer">linkedin.com/in/rockysharaf</a>
+                </div>
+                <div class="contact-message">
+                    <p>Feel free to reach out for collaborations or just to say hi!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Rocky Sharaf</p>
+                    <p class="footer-tagline">Data | Research</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Rocky Sharaf. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
