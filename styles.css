@@ -1042,6 +1042,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .browser-section {
+        margin-top: -80px;
+        margin-bottom: 50px;
+    }
+    
     .browser-window {
         max-width: 98%;
         transform: perspective(1000px) rotateX(2deg);
@@ -1065,6 +1070,10 @@ body {
     
     .screenshot-placeholder p {
         font-size: 0.9rem;
+    }
+    
+    .projects-section {
+        padding-top: 100px;
     }
     
     .nav-menu {
