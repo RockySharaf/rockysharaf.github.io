@@ -3,7 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rocky Sharaf - Portfolio</title>
+    <title>Rocky Sharaf — Software Engineer | Portfolio</title>
+    <meta name="description" content="Rocky Sharaf is a software engineer in Peterborough, Canada, building Android, web and Windows apps — including Rock Preview, a free app to find, browse and preview any file on Windows instantly.">
+    <meta name="author" content="Rocky Sharaf">
+    <link rel="canonical" href="https://rockysharaf.github.io/">
+    <link rel="me" href="https://github.com/RockySharaf">
+    <link rel="me" href="https://www.linkedin.com/in/rockysharaf">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Rocky Sharaf">
+    <meta property="og:title" content="Rocky Sharaf — Software Engineer">
+    <meta property="og:description" content="Rocky Sharaf is a software engineer in Peterborough, Canada, building Android, web and Windows apps — including Rock Preview, a free app to find, browse and preview any file on Windows instantly.">
+    <meta property="og:url" content="https://rockysharaf.github.io/">
+    <meta property="profile:first_name" content="Rocky">
+    <meta property="profile:last_name" content="Sharaf">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Rocky Sharaf — Software Engineer">
+    <meta name="twitter:description" content="Rocky Sharaf is a software engineer in Peterborough, Canada, building Android, web and Windows apps — including Rock Preview, a free app to find, browse and preview any file on Windows instantly.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rocky Sharaf",
+      "url": "https://rockysharaf.github.io/",
+      "jobTitle": "Software Engineer",
+      "address": { "@type": "PostalAddress", "addressLocality": "Peterborough", "addressRegion": "ON", "addressCountry": "CA" },
+      "sameAs": [
+        "https://github.com/RockySharaf",
+        "https://www.linkedin.com/in/rockysharaf"
+      ],
+      "knowsAbout": ["C#", ".NET", "Windows desktop apps", "Android", "Kotlin", "Jetpack Compose", "React", "Python", "SQL"],
+      "workExample": {
+        "@type": "SoftwareApplication",
+        "name": "Rock Preview",
+        "description": "Find any file instantly, browse with the real Windows 11 Explorer, and preview anything without opening it.",
+        "url": "https://github.com/RockySharaf/rock-preview",
+        "downloadUrl": "https://github.com/RockySharaf/rock-preview/releases/latest",
+        "operatingSystem": "Windows 10, Windows 11",
+        "applicationCategory": "UtilitiesApplication",
+        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "author": { "@type": "Person", "name": "Rocky Sharaf" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    }
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         /* CSS Variables for Theme */
@@ -522,6 +564,28 @@
 
         .project-card ul {
             list-style: none;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .project-links a {
+            color: var(--accent-primary);
+            border: 1px solid var(--border-secondary);
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background: var(--accent-primary);
+            color: var(--button-text);
         }
 
         .project-card li {
@@ -1151,6 +1215,21 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                    <h3>Rock Preview — Instant File Search &amp; Preview for Windows</h3>
+                    <ul>
+                        <li>Free, open-source Windows app: find any file instantly, browse with the real Windows 11 File Explorer, and preview anything without opening it.</li>
+                        <li>Indexes whole NTFS drives in seconds by reading the Master File Table directly and stays live through the USN change journal.</li>
+                        <li>Hosts Windows' own Explorer view and navigation pane, with a Windows 11 interface reverse-engineered from Explorer itself.</li>
+                        <li>Previews hundreds of formats — PSD, CorelDRAW, Illustrator, TIFF, RAW photos, PDF, Office, CAD, video — plus ZAP: every file in a folder at once.</li>
+                        <li>Technologies: C#, .NET 10, WinForms, Win32 &amp; COM shell interop, NTFS internals.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/RockySharaf/rock-preview" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source on GitHub</a>
+                        <a href="https://github.com/RockySharaf/rock-preview/releases/latest" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
                     <h3>Bob’s Notes - Print Pros Plus</h3>
                     <ul>
                         <li>Architected a robust, offline-first productivity application using Jetpack Compose and Material 3 Design, transitioning away from legacy XML layouts to a 100% declarative UI paradigm.</li>
@@ -1450,6 +1529,10 @@
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
                     <a href="https://www.linkedin.com/in/rockysharaf" target="_blank" rel="noopener noreferrer">linkedin.com/in/rockysharaf</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/RockySharaf" target="_blank" rel="noopener noreferrer me">github.com/RockySharaf</a>
                 </div>
                 <div class="contact-message">
                     <p>Feel free to reach out for collaborations or just to say hi!</p>
